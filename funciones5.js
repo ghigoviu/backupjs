@@ -26,7 +26,7 @@ function* countAppleSales() {
     for (let i = 0; i < saleList.length; i++) {
       yield saleList[i];
     }
-  }
+}
 
 console.log(countAppleSales().next());
 console.log(countAppleSales().next());

@@ -1,40 +1,37 @@
-//Ejercicio 7
+// Ejercicio 8
 
 /*
-    Crea un archivo llamado conjuntos.js que contenga las siguientes líneas:
+    Crea un archivo JS que contenga las siguientes líneas:
 
-    - Un nuevo Set con los nombres de tu familia
-    - Modifica el Set original añadiendo tu nombre (duplicado) (debería darte lo mismo)
-    - Modifica el Set original añadiendo el nombre "Javascript" (ya que empieza a formar parte de tu vida ;)
+    - Una función sin parámetros que devuelva siempre "true"
+    - Una función asíncrona que utilice un setTimeout y pase por consola un "Hola soy una promesa" 5 segundos después de haberse ejecutado
+    - Una función generadora de índices pares automáticos
 */
 
-let familia = new Set([ "Blanca", "Rodrigo", "Emi", "Said" ]);
-familia.add("Rodrigo");
+function sinParametros(){
+    return true;
+}
 
-console.log(familia)
+setTimeout(function asíncrona() {
+    console.log("Hola, soy una promesa");
+}, 5000);
 
-familia.add("Javascript");
-console.log(familia)
+function* generatePairsId(id=0) {
+    id=2;
+    while(true) {
+        id++;
+        id++;
+        yield id;
+        // Se queda esperando hasta que se vuelva a llamar.
+        if(id > 6 ){
+            return;
+        }
+    }
+}
 
-/*
-    Crea un archivo llamado fechas.js que contenga las siguientes líneas:
+const gen = generatePairsId()
 
-    - La fecha de hoy
-    - La fecha de tu nacimiento
-    - Un variable que indique si hoy es más tarde (>) que la fecha de tu nacimiento
-    - Una variable que contenga el día de tu nacimiento
-    - Una variable que contenga el mes de tu nacimiento (recuerda que Enero es mes 0)
-    - Una variable que contenga el año de tu nacimiento (con 4 dígitos)
-*/
-
-const today = new Date();
-console.log(today)
-
-const nacimiento = new Date(1997, 10, 03)
-const mayorque = today > nacimiento
-console.log(mayorque)
-console.log(nacimiento.getMonth())
-console.log(nacimiento.getFullYear())
-
-//Una ventana que pregunta al usuario su edad y la almacena.
-const edad = prompt("Cuál es tu edad?")
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
