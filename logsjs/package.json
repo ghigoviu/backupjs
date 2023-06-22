@@ -1,0 +1,15 @@
+{
+  "name": "logsjs",
+  "version": "1.0.0",
+  "description": "Logsjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Rodrigo Cambray",
+  "license": "ISC",
+  "dependencies": {
+    "winston": "^3.9.0"
+  }
+}
