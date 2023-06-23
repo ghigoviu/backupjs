@@ -32,4 +32,4 @@ if (process.env.NODE_ENV !== 'production') {
 console.info("Mensaje de info");
 console.debug("Mensaje de debug");
 console.warn("Mensaje de warn");
-console.error("Mensaje de error");
+logger.error("Mensaje de error");
