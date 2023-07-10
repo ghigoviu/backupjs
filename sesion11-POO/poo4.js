@@ -32,4 +32,3 @@ const Rodrigo = new Developer("Rodrigo", 25, "inge");
 Rodrigo.saludo();
 
 // Polimorfismo
-
